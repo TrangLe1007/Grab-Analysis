@@ -13,7 +13,7 @@ order_day,
 CASE 
 	when total_point < 50 then 0
 	when total_point between 50 and 100 then 80000
-	when total_point between 101 and 150 then 120000
+	when total_point between 10 and 150 then 120000
 	when total_point between 151 and 200 then 150000
 	when total_point between 201 and 250 then 200000
 	when total_point > 250 then 280000
