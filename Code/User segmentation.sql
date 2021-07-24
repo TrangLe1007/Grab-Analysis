@@ -20,10 +20,11 @@ end as group_type
 from datahub.grab_vn_booking_tab gvbt
 group by 1,2)
 select month_order,
-group_type,
-count(DISTINCT user_id)
+count(case when group_type="SLiver" then user_id end) as Gold,
+count(case when group_type="Gold" then user_id end) as Gold,
+count(case when group_type="Platinum" then user_id end) as Platinum
 from b
-group by 1,2;
+group by 1;
 
 
 with a as(
